@@ -1,3 +1,3 @@
-const array = []
+const votos = []
 
-export default array
+export default votos

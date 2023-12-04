@@ -1,8 +1,8 @@
 import { Router } from "express";
-import rutaRoutes from "./rutaRoutes.js"
+import votoRoutes from "./votoRoutes.js"
 const router = Router();
 
-router.use("/ruta" , rutaRoutes)
+router.use("/voto" , votoRoutes)
 
 
 export default router
