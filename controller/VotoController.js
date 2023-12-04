@@ -7,21 +7,21 @@ class VotoController {
         try{
             const {candidato , zona} = req.body;
             if(votoService.create(candidato,zona)){
-            res.status(200).send({ success: true, message:"Voto Cargado"});
+            res.status(200).json({ message:"Voto Cargado"});
             }
         }
         catch(error){
-            res.status(400).send({ success: false, errorMsg: error.message});
+            res.status(400).json({ errorMsg: error.message});
         }
 
     }
     getAll = async (req,res) => {
         try{
             const votos = votoService.getAll()
-            res.status(200).send({ success: true, message: {generales: votos}});
+            res.status(200).json({ message: {generales: votos}});
         }
         catch(error){
-            res.status(400).send({ success: false, errorMsg: error});
+            res.status(400).json({ errorMsg: error});
         }
     }
    
